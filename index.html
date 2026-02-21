@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مقهى سكة - Sakka Café</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <h1>مقهى sakka</h1>
+          <span>Sakka Café</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#menu">القائمة</a></li>
+          <li><a href="#about">عنا</a></li>
+          <li><a href="#location">الموقع</a></li>
+          <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">أهلاً وسهلاً بكم في مقهى sakka</h1>
+        <p class="hero-subtitle">تذوقوا أشهى الأطباق المغربية التقليدية في أجواء أصيلة</p>
+        <a href="#menu" class="cta-button">اكتشف القائمة</a>
+      </div>
+    </div>
+    <div class="moroccan-pattern"></div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <h2 class="section-title">قائمة الطعام</h2>
+      <div class="menu-categories">
+        
+        <!-- الطاجين -->
+        <div class="menu-category">
+          <h3 class="category-title">
+            <i class="fas fa-utensils"></i>
+            الطاجين 
+          </h3>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="item-info">
+                <h4>طاجين باللحم</h4>
+                <p>لحم طري مطبوخ بالخضار والتوابل  </p>
+              </div>
+              <div class="item-price">85 درهم</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-info">
+                <h4>طاجين بالدجاج</h4>
+                <p>دجاج طازج مع الزيتون والليمون المحفوظ</p>
+              </div>
+              <div class="item-price">70 درهم</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-info">
+                <h4>طاجين بالخضار</h4>
+                <p>مزيج من الخضار الطازجة بالتوابل المغربية</p>
+              </div>
+              <div class="item-price">55 درهم</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- الحساء والعدس -->
+        <div class="menu-category">
+          <h3 class="category-title">
+            <i class="fas fa-bowl-hot"></i>
+            الحساء والعدس
+          </h3>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="item-info">
+                <h4>حساء العدس المغربي</h4>
+                <p>عدس أحمر مطبوخ بالطماطم والكزبرة والتوابل</p>
+              </div>
+              <div class="item-price">25 درهم</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-info">
+                <h4>حريرة </h4>
+                <p>حساء  بالعدس والطماطم واللحم</p>
+              </div>
+              <div class="item-price">30 درهم</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- البيض والفطور -->
+        <div class="menu-category">
+          <h3 class="category-title">
+            <i class="fas fa-egg"></i>
+           الفطور
+          </h3>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="item-info">
+                <h4>بيض مقلي </h4>
+                <p>بيض طازج مع الطماطم  </p>
+              </div>
+              <div class="item-price">20 درهم</div>
+            </div>
+           
+              
+            </div>
+            <div class="menu-item">
+              <div class="item-info">
+                <h4>فطور مغربي كامل</h4>
+                <p>بيض، خبز، زيتون، جبن، مربى، وأتاي</p>
+              </div>
+              <div class="item-price">45 درهم</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- المشروبات -->
+        <div class="menu-category">
+          <h3 class="category-title">
+            <i class="fas fa-coffee"></i>
+            المشروبات 
+          </h3>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="item-info">
+                <h4>أتاي </h4>
+                <p>شاي أخضر بالنعناع والسكر   </p>
+              </div>
+              <div class="item-price">15 درهم</div>
+            </div>
+            <div class="menu-item">
+              <div class="item-info">
+                <h4>قهوة </h4>
+                <p>قهوة محمصة طازجة </p>
+              </div>
+              <div class="item-price">18 درهم</div>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  
+  <!-- Location Section -->
+  <section id="location" class="location-section">
+    <div class="container">
+      <h2 class="section-title">موقعنا</h2>
+      <div class="location-content">
+        <div class="location-info">
+          <div class="location-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>العنوان</h4>
+              <p>مركز افران الاطلس الصغير </p>
+            </div>
+          </div>
+          <div class="location-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>ساعات العمل</h4>
+              <p>يومياً من 7:00 صباحاً إلى 11:00 مساءً معدا الجمعة </p>
+            </div>
+          </div>
+          <div class="location-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>الهاتف</h4>
+              <p>+212 </p>
+            </div>
+          </div>
+        </div>
+        <div class="map-container">
+          <div id="map" class="interactive-map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">اتصل بنا</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>نحن في انتظاركم</h3>
+          <p>لأي استفسار أو حجز، لا تترددوا في التواصل معنا</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>مقهى سكة</h3>
+          <p>تذوقوا أشهى الأطباق المغربية التقليدية</p>
+        </div>
+        <div class="footer-section">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#menu">القائمة</a></li>
+            <li><a href="#about">عنا</a></li>
+            <li><a href="#location">الموقع</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>تواصل معنا</h4>
+          <p><i class="fas fa-phone"></i> +212 721 651 928</p>
+          <p><i class="fas fa-envelope"></i> info@sakkacafe.ma</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 مقهى sakka. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
